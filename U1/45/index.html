@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../style/style.css?rnd=132">
+  
+    <!--***** dos lineas de scripts para guardar imagen-->
+    <script type="text/javascript" src="../../js/html2canvas.js"></script>
+    <script type="text/javascript" src="../../js/html2canvas.min.js"></script>
+    <!--***** Fin de dos lineas de scripts para guardar imagen-->
+
+</head>
+
+<body>
+
+    <div id="contenedor">
+      <div style="position:absolute;top:0.000000px;left:0.000000px"><nobr><img height="1099.000000" width="872.000000" src ="bgimg/fondo.jpg"/></nobr></div>
+        <!--Empezar a agregar contenido-->
+        <span style="position: absolute; top: 190px; left: 637px">
+			<textarea rows = "1" cols = "15" maxlength = "15" id="bio_p45res1"></textarea>
+		</span>
+	  <span style="position: absolute; top: 222px; left: 637px">
+	  <textarea rows = "1" cols = "15" maxlength = "15" id="bio_p45res2"></textarea>
+	  </span>
+	  <span style="position: absolute; top: 251px; left: 637px">
+	  <textarea rows = "1" cols = "15" maxlength = "15" id="bio_p45res3"></textarea>
+	  </span>
+	  <span style="position: absolute; top: 281px; left: 637px">
+	  <textarea rows = "1" cols = "15" maxlength = "15" id="bio_p45res4"></textarea>
+	  </span>
+		<span style="position: absolute; top: 334px; left: 637px">
+			<textarea rows = "1" cols = "15" maxlength = "15" id="bio_p45res5"></textarea>
+		</span>
+		
+       <span style="position: absolute; top: 387px; left: 128px">
+			<textarea rows = "1" cols = "2" maxlength = "2" id="bio_p45res6"></textarea>
+		</span>
+      <span style="position: absolute; top: 407px; left: 128px">
+	  <textarea rows = "1" cols = "2" maxlength = "2" id="bio_p45res7"></textarea>
+	   </span>
+      <span style="position: absolute; top: 427px; left: 128px">
+	  <textarea rows = "1" cols = "2" maxlength = "2" id="bio_p45res8"></textarea>
+	   </span>
+      <span style="position: absolute; top: 447px; left: 128px">
+	  <textarea rows = "1" cols = "2" maxlength = "2" id="bio_p45res9"></textarea>
+	   </span>
+       <span style="position: absolute; top: 468px; left: 128px">
+			<textarea rows = "1" cols = "2" maxlength = "2" id="bio_p45res10"></textarea>
+		</span>
+       <span style="position: absolute; top: 536px; left: 137px">
+			<textarea rows = "1" cols = "2" maxlength = "2" id="bio_p45res11"></textarea>
+		</span>
+      <span style="position: absolute; top: 567px; left: 137px">
+	  <textarea rows = "1" cols = "2" maxlength = "2" id="bio_p45res12"></textarea>
+		</span>
+      <span style="position: absolute; top: 596px; left: 137px">
+	  <textarea rows = "1" cols = "2" maxlength = "2" id="bio_p45res13"></textarea>
+		</span>
+      <span style="position: absolute; top: 627px; left: 137px">
+	  <textarea rows = "1" cols = "2" maxlength = "2" id="bio_p45res14"></textarea>
+		</span>
+      <span style="position: absolute; top: 658px; left: 137px">
+			<textarea rows = "1" cols = "2" maxlength = "2" id="bio_p45res15"></textarea>
+		</span>
+       
+       
+       <span style="position: absolute; top: 720px; left: 130px">
+			<textarea rows = "1" cols = "85" maxlength = "85" id="bio_p45res16"></textarea><br>
+			<textarea rows = "1" cols = "85" maxlength = "85" id="bio_p45res17"></textarea><br>
+			<textarea rows = "1" cols = "85" maxlength = "85" id="bio_p45res18"></textarea><br>
+			<textarea rows = "1" cols = "85" maxlength = "85" id="bio_p45res19"></textarea><br>
+			<textarea rows = "1" cols = "85" maxlength = "85" id="bio_p45res20"></textarea><br>
+			<textarea rows = "1" cols = "85" maxlength = "85" id="bio_p45res21"></textarea><br>
+			<textarea rows = "1" cols = "85" maxlength = "85" id="bio_p45res22"></textarea><br>
+			<textarea rows = "1" cols = "85" maxlength = "85" id="bio_p45res23"></textarea><br>
+			<textarea rows = "1" cols = "85" maxlength = "85" id="bio_p45res24"></textarea><br>
+			<textarea rows = "1" cols = "85" maxlength = "85" id="bio_p45res25"></textarea><br>
+			<textarea rows = "1" cols = "85" maxlength = "85" id="bio_p45res26"></textarea><br>
+			<textarea rows = "1" cols = "85" maxlength = "85" id="bio_p45res27"></textarea><br>
+			<textarea rows = "1" cols = "85" maxlength = "85" id="bio_p45res28"></textarea><br>
+			<textarea rows = "1" cols = "85" maxlength = "85" id="bio_p45res29"></textarea>
+		</span>
+       
+        <!--Fin del contenido-->
+           <!-- FORMULARIO AL FINAL DEL CONTENIDO -->
+
+		<form style="margin-top: 1070px;margin-left: 190px; position: absolute; z-index: 2;" id="myForm" action="../../send.php" method="post">
+			<textarea style="display:none;" id="myInput" name = "imagen" maxlength="10"></textarea>
+			<input type="button" onclick="save_data()" value="Guardar"  class="btn btn-primary">
+			&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="button" onclick="send_data(); loader(); return false" value="Enviar" class="btn btn-primary"> 
+			<input type="hidden" id="bio_regNA" name="bio_regNA">
+			<input type="hidden" id="bio_regGP" name="bio_regGP">
+			<input type="hidden" id="bio_regCA" name="bio_regCA">
+			<input type="hidden" id="bio_regND" name="bio_regND">
+			<input type="hidden" id="bio_regCD" name="bio_regCD">
+		</form>
+
+	  <!-- FIN FORMULARIO AL FINAL DEL CONTENIDO -->
+
+		<div id="loader" style="display:none; margin-top: 1060px;margin-left: 190px; position: absolute; z-index: 2;">
+			<img src="../../img/carga.gif"  width="180px" height="65px">
+		</div>
+            
+    </div>       
+</body>
+<script type="text/javascript">
+	//Carga datos del registro
+    document.getElementById('bio_regNA').value = localStorage.getItem('bio_regNA');
+    document.getElementById('bio_regGP').value = localStorage.getItem('bio_regGP');
+    document.getElementById('bio_regCA').value = localStorage.getItem('bio_regCA');
+    document.getElementById('bio_regND').value = localStorage.getItem('bio_regND');
+    document.getElementById('bio_regCD').value = localStorage.getItem('bio_regCD');
+
+	 document.getElementById('bio_p45res1').value = localStorage.getItem('bio_p45res1');
+    document.getElementById('bio_p45res2').value = localStorage.getItem('bio_p45res2');
+    document.getElementById('bio_p45res3').value = localStorage.getItem('bio_p45res3');
+    document.getElementById('bio_p45res4').value = localStorage.getItem('bio_p45res4');
+    document.getElementById('bio_p45res5').value = localStorage.getItem('bio_p45res5');
+    document.getElementById('bio_p45res6').value = localStorage.getItem('bio_p45res6');
+    document.getElementById('bio_p45res7').value = localStorage.getItem('bio_p45res7');
+    document.getElementById('bio_p45res8').value = localStorage.getItem('bio_p45res8');
+    document.getElementById('bio_p45res9').value = localStorage.getItem('bio_p45res9');
+    document.getElementById('bio_p45res10').value = localStorage.getItem('bio_p45res10');
+    document.getElementById('bio_p45res11').value = localStorage.getItem('bio_p45res11');
+    document.getElementById('bio_p45res12').value = localStorage.getItem('bio_p45res12');
+    document.getElementById('bio_p45res13').value = localStorage.getItem('bio_p45res13');
+    document.getElementById('bio_p45res14').value = localStorage.getItem('bio_p45res14');
+    document.getElementById('bio_p45res15').value = localStorage.getItem('bio_p45res15');
+    document.getElementById('bio_p45res16').value = localStorage.getItem('bio_p45res16');
+    document.getElementById('bio_p45res17').value = localStorage.getItem('bio_p45res17');
+    document.getElementById('bio_p45res18').value = localStorage.getItem('bio_p45res18');
+    document.getElementById('bio_p45res19').value = localStorage.getItem('bio_p45res19');
+    document.getElementById('bio_p45res20').value = localStorage.getItem('bio_p45res20');
+    document.getElementById('bio_p45res21').value = localStorage.getItem('bio_p45res21');
+    document.getElementById('bio_p45res22').value = localStorage.getItem('bio_p45res22');
+    document.getElementById('bio_p45res23').value = localStorage.getItem('bio_p45res23');
+    document.getElementById('bio_p45res24').value = localStorage.getItem('bio_p45res24');
+    document.getElementById('bio_p45res25').value = localStorage.getItem('bio_p45res25');
+    document.getElementById('bio_p45res26').value = localStorage.getItem('bio_p45res26');
+    document.getElementById('bio_p45res27').value = localStorage.getItem('bio_p45res27');
+    document.getElementById('bio_p45res28').value = localStorage.getItem('bio_p45res28');
+    document.getElementById('bio_p45res29').value = localStorage.getItem('bio_p45res29');
+    
+
+    function save_data(){
+        var bio_p45res1 = document.getElementById('bio_p45res1').value;
+        localStorage.setItem('bio_p45res1', bio_p45res1);
+        var bio_p45res2 = document.getElementById('bio_p45res2').value;
+        localStorage.setItem('bio_p45res2', bio_p45res2);
+        var bio_p45res3 = document.getElementById('bio_p45res3').value;
+        localStorage.setItem('bio_p45res3', bio_p45res3);
+        var bio_p45res4 = document.getElementById('bio_p45res4').value;
+        localStorage.setItem('bio_p45res4', bio_p45res4);
+        var bio_p45res5 = document.getElementById('bio_p45res5').value;
+        localStorage.setItem('bio_p45res5', bio_p45res5);
+        var bio_p45res6 = document.getElementById('bio_p45res6').value;
+        localStorage.setItem('bio_p45res6', bio_p45res6);
+        var bio_p45res7 = document.getElementById('bio_p45res7').value;
+        localStorage.setItem('bio_p45res7', bio_p45res7);
+        var bio_p45res8 = document.getElementById('bio_p45res8').value;
+        localStorage.setItem('bio_p45res8', bio_p45res8);
+        var bio_p45res9 = document.getElementById('bio_p45res9').value;
+        localStorage.setItem('bio_p45res9', bio_p45res9);
+        var bio_p45res10 = document.getElementById('bio_p45res10').value;
+        localStorage.setItem('bio_p45res10', bio_p45res10);
+        var bio_p45res11 = document.getElementById('bio_p45res11').value;
+        localStorage.setItem('bio_p45res11', bio_p45res11);
+        var bio_p45res12 = document.getElementById('bio_p45res12').value;
+        localStorage.setItem('bio_p45res12', bio_p45res12);
+        var bio_p45res13 = document.getElementById('bio_p45res13').value;
+        localStorage.setItem('bio_p45res13', bio_p45res13);
+        var bio_p45res14 = document.getElementById('bio_p45res14').value;
+        localStorage.setItem('bio_p45res14', bio_p45res14);
+        var bio_p45res15 = document.getElementById('bio_p45res15').value;
+        localStorage.setItem('bio_p45res15', bio_p45res15);
+        var bio_p45res16 = document.getElementById('bio_p45res16').value;
+        localStorage.setItem('bio_p45res16', bio_p45res16);
+        var bio_p45res17 = document.getElementById('bio_p45res17').value;
+        localStorage.setItem('bio_p45res17', bio_p45res17);
+        var bio_p45res18 = document.getElementById('bio_p45res18').value;
+        localStorage.setItem('bio_p45res18', bio_p45res18);
+        var bio_p45res19 = document.getElementById('bio_p45res19').value;
+        localStorage.setItem('bio_p45res19', bio_p45res19);
+        var bio_p45res20 = document.getElementById('bio_p45res20').value;
+        localStorage.setItem('bio_p45res20', bio_p45res20);
+        var bio_p45res21 = document.getElementById('bio_p45res21').value;
+        localStorage.setItem('bio_p45res21', bio_p45res21);
+        var bio_p45res22 = document.getElementById('bio_p45res22').value;
+        localStorage.setItem('bio_p45res22', bio_p45res22);
+        var bio_p45res23 = document.getElementById('bio_p45res23').value;
+        localStorage.setItem('bio_p45res23', bio_p45res23);
+        var bio_p45res24 = document.getElementById('bio_p45res24').value;
+        localStorage.setItem('bio_p45res24', bio_p45res24);
+        var bio_p45res25 = document.getElementById('bio_p45res25').value;
+        localStorage.setItem('bio_p45res25', bio_p45res25);
+        var bio_p45res26 = document.getElementById('bio_p45res26').value;
+        localStorage.setItem('bio_p45res26', bio_p45res26);
+        var bio_p45res27 = document.getElementById('bio_p45res27').value;
+        localStorage.setItem('bio_p45res27', bio_p45res27);
+        var bio_p45res28 = document.getElementById('bio_p45res28').value;
+        localStorage.setItem('bio_p45res28', bio_p45res28);
+        var bio_p45res29 = document.getElementById('bio_p45res29').value;
+        localStorage.setItem('bio_p45res29', bio_p45res29);
+        
+
+        alert("Guardado correctamente");
+    }
+
+    function send_data(){
+        pantallazo();
+        setTimeout(function(){document.getElementById("myForm").submit();}, 3000);
+    }
+
+    function pantallazo(){
+
+        html2canvas(document.body).then(canvas => {
+        	var dataURL = canvas.toDataURL();
+            console.log(dataURL);
+            document.getElementById("myInput").value = dataURL;
+            var canvas = document.createElement("canvas");
+            var ctx=canvas.getContext("2d");
+            var cw=canvas.width;
+            var ch=canvas.height;
+            var maxW=1280;
+            var maxH=1024;
+
+            var output = document.getElementById('myInput');
+	        var img = new Image;
+            img.onload = function() {
+                var iw=img.width;
+                var ih=img.height;
+                var scale=Math.min((maxW/iw),(maxH/ih));
+                var iwScaled=iw*scale;
+                var ihScaled=ih*scale;
+                canvas.width=iwScaled;
+                canvas.height=ihScaled;
+                ctx.drawImage(img,0,0,iwScaled,ihScaled);
+     	        output.value = canvas.toDataURL("../image/jpeg",1);
+            }
+            img.src = dataURL
+        });
+    }
+    
+    function loader(){
+		document.getElementById('loader').style.display = 'Block';
+ 
+	}
+
+</script>
+
+</html>

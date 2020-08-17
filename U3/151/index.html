@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../style/style.css?rnd=132">
+  
+    <!--***** dos lineas de scripts para guardar imagen-->
+    <script type="text/javascript" src="../../js/html2canvas.js"></script>
+    <script type="text/javascript" src="../../js/html2canvas.min.js"></script>
+    <!--***** Fin de dos lineas de scripts para guardar imagen-->
+
+</head>
+
+<body>
+
+    <div id="contenedor">
+      <div style="position:absolute;top:0.000000px;left:0.000000px"><nobr><img height="1099.000000" width="872.000000" src ="bgimg/fondo.jpg"/></nobr></div>
+        <!--Empezar a agregar contenido-->
+        
+		<span style="position: absolute; top: 605px; left: 638px">
+			<textarea rows = "1" cols = "15" maxlength = "15" id="bio_p151res1"></textarea>
+		</span>
+      <span style="position: absolute; top: 635px; left: 638px">
+	  <textarea rows = "1" cols = "15" maxlength = "15" id="bio_p151res2"></textarea>
+	   </span>
+      <span style="position: absolute; top: 665px; left: 639px">
+	  <textarea rows = "1" cols = "15" maxlength = "15" id="bio_p151res3"></textarea>
+	   </span>
+      <span style="position: absolute; top: 696px; left: 639px">
+	  <textarea rows = "1" cols = "15" maxlength = "15" id="bio_p151res4"></textarea>
+	   </span>
+       <span style="position: absolute; top: 725px; left: 638px">
+			<textarea rows = "1" cols = "15" maxlength = "15" id="bio_p151res5"></textarea>
+		</span>
+       
+       <span style="position: absolute; top: 780px; left: 130px">
+			<textarea rows = "1" cols = "85" maxlength = "85" id="bio_p151res6"></textarea><br>
+			<textarea rows = "1" cols = "85" maxlength = "85" id="bio_p151res7"></textarea><br>
+			<textarea rows = "1" cols = "85" maxlength = "85" id="bio_p151res8"></textarea><br>
+			<textarea rows = "1" cols = "85" maxlength = "85" id="bio_p151res9"></textarea><br>
+			<textarea rows = "1" cols = "85" maxlength = "85" id="bio_p151res10"></textarea><br>
+	   <textarea rows = "1" cols = "85" maxlength = "85" id="bio_p151res11"></textarea>
+		</span>
+       
+       <span style="position: absolute; top: 186px; left: 107px">
+			<input type="checkbox" id="bio_p151res12">
+		</span>
+       <span style="position: absolute; top: 206px; left: 107px">
+			<input type="checkbox" id="bio_p151res13">
+		</span>
+       <span style="position: absolute; top: 226px; left: 107px">
+			<input type="checkbox" id="bio_p151res14">
+		</span>
+      <span style="position: absolute; top: 246px; left: 107px">
+			<input type="checkbox" id="bio_p151res15">
+	   </span>
+       
+       <span style="position: absolute; top: 316px; left: 107px">
+			<input type="checkbox" id="bio_p151res16">
+		</span>
+        <span style="position: absolute; top: 336px; left: 107px">
+			<input type="checkbox" id="bio_p151res17">
+		</span>
+        <span style="position: absolute; top: 356px; left: 107px">
+			<input type="checkbox" id="bio_p151res18">
+		</span>
+      <span style="position: absolute; top: 376px; left: 107px">
+			<input type="checkbox" id="bio_p151res19">
+	  </span>
+       
+        <span style="position: absolute; top: 447px; left: 107px">
+			<input type="checkbox" id="bio_p151res20">
+		</span>
+       <span style="position: absolute; top: 467px; left: 107px">
+			<input type="checkbox" id="bio_p151res21">
+		</span>
+       <span style="position: absolute; top: 487px; left: 107px">
+			<input type="checkbox" id="bio_p151res22">
+		</span>
+       <span style="position: absolute; top: 507px; left: 107px">
+			<input type="checkbox" id="bio_p151res23">
+		</span>
+
+       
+        <!--Fin del contenido-->
+           <!-- FORMULARIO AL FINAL DEL CONTENIDO -->
+
+		<form style="margin-top: 1070px;margin-left: 190px; position: absolute; z-index: 2;" id="myForm" action="../../send.php" method="post">
+			<textarea style="display:none;" id="myInput" name = "imagen" maxlength="10"></textarea>
+			<input type="button" onclick="save_data()" value="Guardar"  class="btn btn-primary">
+			&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="button" onclick="send_data(); loader(); return false" value="Enviar" class="btn btn-primary"> 
+			<input type="hidden" id="bio_regNA" name="bio_regNA">
+			<input type="hidden" id="bio_regGP" name="bio_regGP">
+			<input type="hidden" id="bio_regCA" name="bio_regCA">
+			<input type="hidden" id="bio_regND" name="bio_regND">
+			<input type="hidden" id="bio_regCD" name="bio_regCD">
+		</form>
+
+		<!-- FIN FORMULARIO AL FINAL DEL CONTENIDO -->
+
+		<div id="loader" style="display:none; margin-top: 1060px;margin-left: 190px; position: absolute; z-index: 2;">
+			<img src="../../img/carga.gif"  width="180px" height="65px">
+		</div>
+            
+    </div>       
+</body>
+<script type="text/javascript">
+	//Carga datos del registro
+    document.getElementById('bio_regNA').value = localStorage.getItem('bio_regNA');
+    document.getElementById('bio_regGP').value = localStorage.getItem('bio_regGP');
+    document.getElementById('bio_regCA').value = localStorage.getItem('bio_regCA');
+    document.getElementById('bio_regND').value = localStorage.getItem('bio_regND');
+    document.getElementById('bio_regCD').value = localStorage.getItem('bio_regCD');
+
+	 document.getElementById('bio_p151res1').value = localStorage.getItem('bio_p151res1');
+    document.getElementById('bio_p151res2').value = localStorage.getItem('bio_p151res2');
+    document.getElementById('bio_p151res3').value = localStorage.getItem('bio_p151res3');
+    document.getElementById('bio_p151res4').value = localStorage.getItem('bio_p151res4');
+    document.getElementById('bio_p151res5').value = localStorage.getItem('bio_p151res5');
+    document.getElementById('bio_p151res6').value = localStorage.getItem('bio_p151res6');
+    document.getElementById('bio_p151res7').value = localStorage.getItem('bio_p151res7');
+    document.getElementById('bio_p151res8').value = localStorage.getItem('bio_p151res8');
+    document.getElementById('bio_p151res9').value = localStorage.getItem('bio_p151res9');
+    document.getElementById('bio_p151res10').value = localStorage.getItem('bio_p151res10');
+    document.getElementById('bio_p151res11').value = localStorage.getItem('bio_p151res11');
+    document.getElementById('bio_p151res12').value = localStorage.getItem('bio_p151res12');
+     // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('bio_p151res12').value == "1")
+        document.getElementById("bio_p151res12").checked = true; 
+
+    document.getElementById('bio_p151res13').value = localStorage.getItem('bio_p151res13');
+     // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('bio_p151res13').value == "1")
+        document.getElementById("bio_p151res13").checked = true; 
+
+    document.getElementById('bio_p151res14').value = localStorage.getItem('bio_p151res14');
+     // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('bio_p151res14').value == "1")
+        document.getElementById("bio_p151res14").checked = true; 
+
+    document.getElementById('bio_p151res15').value = localStorage.getItem('bio_p151res15');
+     // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('bio_p151res15').value == "1")
+        document.getElementById("bio_p151res15").checked = true; 
+
+    document.getElementById('bio_p151res16').value = localStorage.getItem('bio_p151res16');
+     // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('bio_p151res16').value == "1")
+        document.getElementById("bio_p151res16").checked = true; 
+
+    document.getElementById('bio_p151res17').value = localStorage.getItem('bio_p151res17');
+     // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('bio_p151res17').value == "1")
+        document.getElementById("bio_p151res17").checked = true; 
+
+    document.getElementById('bio_p151res18').value = localStorage.getItem('bio_p151res18');
+     // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('bio_p151res18').value == "1")
+        document.getElementById("bio_p151res18").checked = true; 
+
+    document.getElementById('bio_p151res19').value = localStorage.getItem('bio_p151res19');
+    // ** INICIO ACTIVACION CHECKBOK ** //
+    //comprobar si el valor es 1 se selecciona 
+    if(document.getElementById('bio_p151res19').value == "1")
+        document.getElementById("bio_p151res19").checked = true; // si es uno se activa en checkbox
+    // ** FIN ACTIVACION CHECKBOK ** //
+
+    document.getElementById('bio_p151res20').value = localStorage.getItem('bio_p151res20');
+    // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('bio_p151res20').value == "1")
+        document.getElementById("bio_p151res20").checked = true; 
+    // ** FIN ACTIVACION CHECKBOK ** //
+
+    document.getElementById('bio_p151res21').value = localStorage.getItem('bio_p151res21');
+    // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('bio_p151res21').value == "1")
+        document.getElementById("bio_p151res21").checked = true; 
+    // ** FIN ACTIVACION CHECKBOK ** //
+
+    document.getElementById('bio_p151res22').value = localStorage.getItem('bio_p151res22');
+    // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('bio_p151res22').value == "1")
+        document.getElementById("bio_p151res22").checked = true; 
+    // ** FIN ACTIVACION CHECKBOK ** //
+
+    document.getElementById('bio_p151res23').value = localStorage.getItem('bio_p151res23');
+    // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('bio_p151res23').value == "1")
+        document.getElementById("bio_p151res23").checked = true; 
+    // ** FIN ACTIVACION CHECKBOK ** //
+
+    function save_data(){
+        var bio_p151res1 = document.getElementById('bio_p151res1').value;
+        localStorage.setItem('bio_p151res1', bio_p151res1);
+        var bio_p151res2 = document.getElementById('bio_p151res2').value;
+        localStorage.setItem('bio_p151res2', bio_p151res2);
+        var bio_p151res3 = document.getElementById('bio_p151res3').value;
+        localStorage.setItem('bio_p151res3', bio_p151res3);
+        var bio_p151res4 = document.getElementById('bio_p151res4').value;
+        localStorage.setItem('bio_p151res4', bio_p151res4);
+        var bio_p151res5 = document.getElementById('bio_p151res5').value;
+        localStorage.setItem('bio_p151res5', bio_p151res5);
+        var bio_p151res6 = document.getElementById('bio_p151res6').value;
+        localStorage.setItem('bio_p151res6', bio_p151res6);
+        var bio_p151res7 = document.getElementById('bio_p151res7').value;
+        localStorage.setItem('bio_p151res7', bio_p151res7);
+        var bio_p151res8 = document.getElementById('bio_p151res8').value;
+        localStorage.setItem('bio_p151res8', bio_p151res8);
+        var bio_p151res9 = document.getElementById('bio_p151res9').value;
+        localStorage.setItem('bio_p151res9', bio_p151res9);
+        var bio_p151res10 = document.getElementById('bio_p151res10').value;
+        localStorage.setItem('bio_p151res10', bio_p151res10);
+        var bio_p151res11 = document.getElementById('bio_p151res11').value;
+        localStorage.setItem('bio_p151res11', bio_p151res11);
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('bio_p151res12').checked;
+        if(isChecked){
+            var bio_p151res12 = "1";
+        }    
+        localStorage.setItem('bio_p151res12', bio_p151res12);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('bio_p151res13').checked;
+        if(isChecked){
+            var bio_p151res13 = "1";
+        }    
+        localStorage.setItem('bio_p151res13', bio_p151res13);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('bio_p151res14').checked;
+        if(isChecked){
+            var bio_p151res14 = "1";
+        }    
+        localStorage.setItem('bio_p151res14', bio_p151res14);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('bio_p151res15').checked;
+        if(isChecked){
+            var bio_p151res15 = "1";
+        }    
+        localStorage.setItem('bio_p151res15', bio_p151res15);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('bio_p151res16').checked;
+        if(isChecked){
+            var bio_p151res16 = "1";
+        }    
+        localStorage.setItem('bio_p151res16', bio_p151res16);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('bio_p151res17').checked;
+        if(isChecked){
+            var bio_p151res17 = "1";
+        }    
+        localStorage.setItem('bio_p151res17', bio_p151res17);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('bio_p151res18').checked;
+        if(isChecked){
+            var bio_p151res18 = "1";
+        }    
+        localStorage.setItem('bio_p151res18', bio_p151res18);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('bio_p151res19').checked;
+        if(isChecked){
+            var bio_p151res19 = "1";
+        }
+        localStorage.setItem('bio_p151res19', bio_p151res19);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('bio_p151res20').checked;
+        if(isChecked){
+            var bio_p151res20 = "1";
+        }    
+        localStorage.setItem('bio_p151res20', bio_p151res20);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('bio_p151res21').checked;
+        if(isChecked){
+            var bio_p151res21 = "1";
+        }    
+        localStorage.setItem('bio_p151res21', bio_p151res21);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('bio_p151res22').checked;
+        if(isChecked){
+            var bio_p151res22 = "1";
+        }    
+        localStorage.setItem('bio_p151res22', bio_p151res22);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('bio_p151res23').checked;
+        if(isChecked){
+            var bio_p151res23 = "1";
+        }    
+        localStorage.setItem('bio_p151res23', bio_p151res23);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        alert("Guardado correctamente");
+    }
+
+    function send_data(){
+        pantallazo();
+        setTimeout(function(){document.getElementById("myForm").submit();}, 3000);
+    }
+
+    function pantallazo(){
+
+        html2canvas(document.body).then(canvas => {
+        	var dataURL = canvas.toDataURL();
+            console.log(dataURL);
+            document.getElementById("myInput").value = dataURL;
+            var canvas = document.createElement("canvas");
+            var ctx=canvas.getContext("2d");
+            var cw=canvas.width;
+            var ch=canvas.height;
+            var maxW=1280;
+            var maxH=1024;
+
+            var output = document.getElementById('myInput');
+	        var img = new Image;
+            img.onload = function() {
+                var iw=img.width;
+                var ih=img.height;
+                var scale=Math.min((maxW/iw),(maxH/ih));
+                var iwScaled=iw*scale;
+                var ihScaled=ih*scale;
+                canvas.width=iwScaled;
+                canvas.height=ihScaled;
+                ctx.drawImage(img,0,0,iwScaled,ihScaled);
+     	        output.value = canvas.toDataURL("../image/jpeg",1);
+            }
+            img.src = dataURL
+        });
+    }
+    
+    function loader(){
+		document.getElementById('loader').style.display = 'Block';
+ 
+	}
+
+</script>
+
+</html>
